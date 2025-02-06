@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: #343a40; /* Dark gray for a professional look */
+      display: flex;
+      align-items: center;
+      padding: 10px; /* Size of navbar */
+    }
+
+    .logo img {
+      width: 100px; /* Logo size */
+      height: 70px;
+      border-radius: 50%;
+      border: 5px solid #fff; /* Optional border color */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-grow: 1;
+      justify-content: flex-end; /* Align menu to the right */
+    }
+
+    .menu li {
+      margin-left: 20px; /* Spacing between menu items */
+    }
+
+    .menu a {
+      color: #fff; /* Link color */
+      text-decoration: none;
+      padding: 8px 16px;
+      transition: background-color 0.3s, color 0.3s, border 0.3s; /* Smooth transition */
+      border: 2px solid transparent; /* Initial border */
+      border-radius: 10px;
+    }
+
+    .menu a:hover {
+      background-color: red; /* Red hover effect */
+      color: #fff; /* Ensure text stays white */
+      border: 0.5px solid #fff; /* Increased border size on hover */
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo">
+      <img src="images/logo.jpg" alt="Logo" />
+    </a>
+    <input class="menu-btn" type="checkbox" id="menu-btn"/>
+    <label class="menu-icon" for="menu-btn">
+      <span class="nav-icon"></span>
+    </label>
+    <ul class="menu">
+      <li><a href="/about">About</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/register">Apply Now</a></li>
+      {{#if user}} <!-- Check if user is logged in -->
+        <li><a href="/logout">Logout</a></li>
+      {{else}} <!-- If user is not logged in -->
+        <li><a href="/login">Login</a></li>
+      {{/if}}
+    </ul>
+  </nav>
+</body>
+</html>

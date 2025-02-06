@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Hostel Facilities</title>
+    <style>
+        /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styles */
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Events Section */
+#events h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.event {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.event h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.event p {
+    font-size: 1.1em;
+}
+
+/* Gallery Section */
+#gallery h2 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.image-gallery img {
+    width: calc(25% - 10px); /* Adjusts to 25% of the container width */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+    font-size: 1.6em;
+}
+
+footer p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .image-gallery img {
+        width: calc(50% - 10px); /* Two images per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-gallery img {
+        width: 100%; /* One image per row on mobile */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>College Hostel Facilities</h1>
+    </header>
+    <main>
+        <section class="facilities">
+            <h2>Our Facilities</h2>
+            <ul>
+                <li>Comfortable Accommodations</li>
+                <li>24/7 Wi-Fi Access</li>
+                <li>Common Room for Socializing</li>
+                <li>Study Rooms</li>
+                <li>Mess Facilities with Nutritious Food</li>
+                <li>Gym and Recreation Area</li>
+            </ul>
+        </section>
+
+        <section class="images">
+            <h2>Gallery</h2>
+            <div class="image-container">
+                <img src="images/room.jpeg" alt="Hostel Room" width="500px" style="text-shadow">
+                <img src="images/mess.jpeg" alt="Common MESS">
+                <img src="images/study.jpeg" alt="Study Area">
+                <img src="images/gym.jpeg" alt="Gym">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 College Hostel. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

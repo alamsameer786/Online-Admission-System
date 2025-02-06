@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Sports Clubs</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Light background color */
+        }
+
+        header {
+            background: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #menu-toggle {
+            display: none; /* Hidden by default */
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .club {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Space between clubs */
+        }
+
+        .club img {
+            width: 100px; /* Image size */
+            height: 100px; /* Image size */
+            border-radius: 50%; /* Circular image */
+            margin-right: 20px; /* Space between image and text */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #f8f9fa;
+            margin-top: 20px; /* Space above footer */
+        }
+
+        @media (max-width: 600px) {
+            #menu {
+                display: none; /* Hide menu by default */
+                flex-direction: column;
+                position: absolute;
+                background: #007bff;
+                top: 50px;
+                left: 0;
+                right: 0;
+            }
+
+            #menu.show {
+                display: flex; /* Show menu when toggled */
+            }
+
+            #menu-toggle {
+                display: block; /* Show menu toggle button */
+                background: #007bff;
+                color: white;
+                border: none;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>College Sports Clubs</h1>
+        <nav>
+            <ul id="menu" class="hidden">
+                <li><a href="#football">Football</a></li>
+                <li><a href="#basketball">Basketball</a></li>
+                <li><a href="#tennis">Tennis</a></li>
+                <li><a href="#swimming">Swimming</a></li>
+            </ul>
+            <button id="menu-toggle">Menu</button>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="football" class="club">
+            <img src="images/fball.png" alt="Football Club" />
+            <div>
+                <h2>Football Club</h2>
+                <p>Join us for exciting football matches and training sessions.</p>
+            </div>
+        </section>
+        <section id="basketball" class="club">
+            <img src="images/bball.png" alt="Basketball Club" />
+            <div>
+                <h2>Basketball Club</h2>
+                <p>Join us for exciting basketball matches and training sessions.</p>
+            </div>
+        </section>
+
+        <section id="tennis" class="club">
+            <img src="images/ten.png" alt="Tennis Club" />
+            <div>
+                <h2>Tennis Club</h2>
+                <p>Whether a beginner or expert, all skill levels are welcome.</p>
+            </div>
+        </section>
+        
+        <section id="swimming" class="club">
+            <img src="images/swim.png" alt="Swimming Club" />
+            <div>
+                <h2>Swimming Club</h2>
+                <p>Stay fit and enjoy swimming in our pool.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 College Sports Clubs</p>
+    </footer>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
